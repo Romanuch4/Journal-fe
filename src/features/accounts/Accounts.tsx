@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { API_URL } from "src/shared/lib/api";
 import { ProgressSpinner } from "primereact/progressspinner";
+
+import { API_URL } from "src/shared/lib/api";
 
 export function Accounts() {
   const { data, error, isLoading } = useQuery({

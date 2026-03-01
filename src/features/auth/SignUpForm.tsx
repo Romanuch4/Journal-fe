@@ -1,10 +1,13 @@
-import { redirect } from "@tanstack/react-router";
-import styles from "./common/index.module.css";
-import { authClient } from "src/shared/lib/auth";
-import { signUpSchema } from "./common/validationSchemas";
-import { useAppForm } from "src/shared/lib/form";
 import type { SubmitEventHandler } from "react";
+
+import { redirect } from "@tanstack/react-router";
+
+import { authClient } from "src/shared/lib/auth";
+import { useAppForm } from "src/shared/lib/form";
+
 import { AuthContainer } from "./common/AuthContainer";
+import styles from "./common/index.module.css";
+import { signUpSchema } from "./common/validationSchemas";
 
 export function SignUpForm() {
   const form = useAppForm({

@@ -1,3 +1,5 @@
+import { lazy } from "react";
+
 import {
   Link,
   Outlet,
@@ -7,7 +9,7 @@ import {
   createRouter,
   redirect,
 } from "@tanstack/react-router";
-import { lazy } from "react";
+
 import { authClient } from "src/shared/lib/auth";
 
 const Login = lazy(() => import("src/pages/auth/Login"));

@@ -1,10 +1,13 @@
-import styles from "./common/index.module.css";
-import { authClient } from "src/shared/lib/auth";
-import { loginSchema } from "./common/validationSchemas";
-import { useAppForm } from "src/shared/lib/form";
 import type { SubmitEventHandler } from "react";
-import { AuthContainer } from "./common/AuthContainer";
+
 import { useRouter } from "@tanstack/react-router";
+
+import { authClient } from "src/shared/lib/auth";
+import { useAppForm } from "src/shared/lib/form";
+
+import { AuthContainer } from "./common/AuthContainer";
+import styles from "./common/index.module.css";
+import { loginSchema } from "./common/validationSchemas";
 
 export function LoginForm() {
   const router = useRouter();

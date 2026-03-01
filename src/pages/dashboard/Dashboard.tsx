@@ -1,13 +1,16 @@
-import { Button } from "primereact/button";
-import styles from "./index.module.css";
-import Logo from "src/assets/logo.svg?react";
 import { useRef, useState } from "react";
-import { Sidebar } from "primereact/sidebar";
-import { Accounts } from "src/features/accounts";
-import { Menu } from "primereact/menu";
-import { Toast } from "primereact/toast";
-import { authClient } from "src/shared/lib/auth";
+
 import { useRouter } from "@tanstack/react-router";
+import { Button } from "primereact/button";
+import { Menu } from "primereact/menu";
+import { Sidebar } from "primereact/sidebar";
+import { Toast } from "primereact/toast";
+
+import Logo from "src/assets/logo.svg?react";
+import { Accounts } from "src/features/accounts";
+import { authClient } from "src/shared/lib/auth";
+
+import styles from "./index.module.css";
 
 export default function Dashboard() {
   const [visible, setVisible] = useState(false);

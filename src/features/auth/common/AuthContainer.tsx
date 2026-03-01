@@ -1,7 +1,10 @@
-import { Button } from "primereact/button";
-import styles from "./index.module.css";
-import Logo from "src/assets/logo.svg?react";
 import type { SubmitEventHandler } from "react";
+
+import { Button } from "primereact/button";
+
+import Logo from "src/assets/logo.svg?react";
+
+import styles from "./index.module.css";
 
 type Props = {
   title: string;

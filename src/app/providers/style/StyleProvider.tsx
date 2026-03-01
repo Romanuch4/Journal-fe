@@ -1,4 +1,4 @@
-import { PrimeReactProvider, type APIOptions } from "primereact/api";
+import { type APIOptions, PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-dark-teal/theme.css";
 import "primeicons/primeicons.css";
 import "./index.css";

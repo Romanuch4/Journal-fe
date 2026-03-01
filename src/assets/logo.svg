@@ -1,0 +1,15 @@
+<svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#2dd4bf" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Top face -->
+    <path d="M50 12 L85 32 L50 52 L15 32 Z" />
+    
+    <!-- Vertical edges -->
+    <path d="M15 32 L15 68 L50 88 L85 68 L85 32" />
+    
+    <!-- Inner structure (modern cut lines) -->
+    <path d="M50 12 L50 52 L50 88" />
+    <path d="M15 32 L50 52 L85 32" />
+    
+  </g>
+</svg>

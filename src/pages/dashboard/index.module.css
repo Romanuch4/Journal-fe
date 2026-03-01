@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+    background-color: var(--surface-card);
+}
+
+.title {
+    color: #fff;
+    font-weight: 400;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.right > button > span {
+    font-size: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}

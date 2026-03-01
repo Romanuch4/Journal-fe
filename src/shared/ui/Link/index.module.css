@@ -1,0 +1,13 @@
+.link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:focus {
+    outline: none;
+    text-decoration: underline;
+}

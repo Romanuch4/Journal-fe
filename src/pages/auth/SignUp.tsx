@@ -2,7 +2,7 @@ import { SignUpForm } from "src/features/auth";
 
 import styles from "./index.module.css";
 
-export default function SignUp() {
+export function SignUp() {
   return (
     <div className={styles.login}>
       <SignUpForm />

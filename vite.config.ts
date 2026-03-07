@@ -10,4 +10,7 @@ export default defineConfig({
       src: "/src",
     },
   },
+  html: {
+    cspNonce: "CSP_PLACEHOLDER",
+  },
 });

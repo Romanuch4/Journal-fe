@@ -12,7 +12,7 @@ import { authClient } from "src/shared/lib/auth";
 
 import styles from "./index.module.css";
 
-export default function Dashboard() {
+export function Dashboard() {
   const [visible, setVisible] = useState(false);
   const router = useRouter();
 

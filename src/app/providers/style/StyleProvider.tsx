@@ -3,14 +3,10 @@ import "primereact/resources/themes/lara-dark-teal/theme.css";
 import "primeicons/primeicons.css";
 import "./index.css";
 
-type Props = {
-  children: React.ReactNode;
-};
-
 const styleConfig: Partial<APIOptions> = {
   ripple: true,
 };
 
-export function StyleProvider({ children }: Props) {
+export function StyleProvider({ children }: Required<React.PropsWithChildren>) {
   return <PrimeReactProvider value={styleConfig}>{children}</PrimeReactProvider>;
 }

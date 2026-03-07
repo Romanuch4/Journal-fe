@@ -4,8 +4,8 @@ import { ProgressSpinner } from "primereact/progressspinner";
 import { API_URL } from "src/shared/lib/api";
 
 export function Accounts() {
-  const { data, error, isLoading } = useQuery({
-    queryKey: ["accounts"],
+  const { data, error, isPending } = useQuery({
+    queryKey: [API_URL.accounts],
     queryFn: async () => {
       const res = await fetch(API_URL.accounts, {
         method: "GET",
@@ -19,7 +19,7 @@ export function Accounts() {
     },
   });
 
-  if (isLoading) {
+  if (isPending) {
     return <ProgressSpinner />;
   }
 

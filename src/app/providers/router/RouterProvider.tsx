@@ -12,9 +12,15 @@ import {
 
 import { authClient } from "src/shared/lib/auth";
 
-const Login = lazy(() => import("src/pages/auth/Login"));
-const SignUp = lazy(() => import("src/pages/auth/SignUp"));
-const Dashboard = lazy(() => import("src/pages/dashboard/Dashboard"));
+const Login = lazy(() =>
+  import("src/pages/auth/Login").then((module) => ({ default: module.Login })),
+);
+const SignUp = lazy(() =>
+  import("src/pages/auth/SignUp").then((module) => ({ default: module.SignUp })),
+);
+const Dashboard = lazy(() =>
+  import("src/pages/dashboard/Dashboard").then((module) => ({ default: module.Dashboard })),
+);
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,

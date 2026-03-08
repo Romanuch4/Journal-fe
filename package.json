@@ -20,6 +20,7 @@
     "@tanstack/react-router": "^1.161.3",
     "better-auth": "^1.4.19",
     "dompurify": "^3.3.2",
+    "ky": "^1.14.3",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.7",
     "react": "^19.2.0",

@@ -1,21 +1,24 @@
 import type { SubmitEventHandler } from "react";
 
-import { redirect } from "@tanstack/react-router";
+import { useRouter } from "@tanstack/react-router";
 
 import { authClient } from "src/shared/lib/auth";
 import { useAppForm } from "src/shared/lib/form";
 
 import { AuthContainer } from "./common/AuthContainer";
 import styles from "./common/index.module.css";
-import { signUpSchema } from "./common/validationSchemas";
+import { signUpSchema, type SignUpFormValues } from "./common/validationSchemas";
+
+const defaultValues: SignUpFormValues = {
+  name: "",
+  email: "",
+  password: "",
+};
 
 export function SignUpForm() {
+  const router = useRouter();
   const form = useAppForm({
-    defaultValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
+    defaultValues,
     validators: {
       onChange: signUpSchema,
     },
@@ -29,7 +32,7 @@ export function SignUpForm() {
         },
         {
           onSuccess: () => {
-            redirect({ to: "/dashboard" });
+            router.navigate({ to: "/dashboard" }).catch(() => {});
           },
           onError: (ctx) => {
             // display the error message

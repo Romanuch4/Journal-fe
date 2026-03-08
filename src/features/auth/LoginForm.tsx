@@ -7,15 +7,17 @@ import { useAppForm } from "src/shared/lib/form";
 
 import { AuthContainer } from "./common/AuthContainer";
 import styles from "./common/index.module.css";
-import { loginSchema } from "./common/validationSchemas";
+import { loginSchema, type LoginFormValues } from "./common/validationSchemas";
+
+const defaultValues: LoginFormValues = {
+  email: "",
+  password: "",
+};
 
 export function LoginForm() {
   const router = useRouter();
   const form = useAppForm({
-    defaultValues: {
-      email: "",
-      password: "",
-    },
+    defaultValues,
     validators: {
       onChange: loginSchema,
     },
@@ -28,7 +30,7 @@ export function LoginForm() {
         },
         {
           onSuccess: () => {
-            void router.navigate({ to: "/dashboard" });
+            router.navigate({ to: "/dashboard" }).catch(() => {});
           },
           onError: (ctx) => {
             // display the error message

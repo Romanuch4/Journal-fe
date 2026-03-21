@@ -10,7 +10,7 @@ import {
   redirect,
 } from "@tanstack/react-router";
 
-import { authClient } from "src/shared/lib/auth";
+import { authClient } from "src/shared/api";
 
 const Login = lazy(() =>
   import("src/pages/auth/Login").then((module) => ({ default: module.Login })),
@@ -59,6 +59,7 @@ const dashboardRoute = createRoute({
   component: Dashboard,
   beforeLoad: async () => {
     const { data } = await authClient.getSession();
+
     if (!data) {
       throw redirect({ to: "/login" });
     }

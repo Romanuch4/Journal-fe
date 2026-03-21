@@ -7,7 +7,7 @@ import { Sidebar } from "primereact/sidebar";
 import { Toast } from "primereact/toast";
 
 import Logo from "src/assets/logo.svg?react";
-import { authClient } from "src/shared/lib/auth";
+import { authClient } from "src/shared/api";
 
 import styles from "./index.module.css";
 

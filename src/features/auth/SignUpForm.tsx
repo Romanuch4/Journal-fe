@@ -2,7 +2,7 @@ import type { SubmitEventHandler } from "react";
 
 import { useRouter } from "@tanstack/react-router";
 
-import { authClient } from "src/shared/lib/auth";
+import { authClient } from "src/shared/api";
 import { useAppForm } from "src/shared/lib/form";
 
 import { AuthContainer } from "./common/AuthContainer";
@@ -17,6 +17,7 @@ const defaultValues: SignUpFormValues = {
 
 export function SignUpForm() {
   const router = useRouter();
+
   const form = useAppForm({
     defaultValues,
     validators: {

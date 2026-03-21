@@ -17,6 +17,7 @@
   "dependencies": {
     "@tanstack/react-form": "^1.28.3",
     "@tanstack/react-query": "^5.90.21",
+    "@tanstack/react-query-devtools": "^5.91.3",
     "@tanstack/react-router": "^1.161.3",
     "better-auth": "^1.4.19",
     "dompurify": "^3.3.2",

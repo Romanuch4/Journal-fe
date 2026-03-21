@@ -1,13 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { ProgressSpinner } from "primereact/progressspinner";
 
-import { api, API_URL } from "src/shared/lib/api";
+import { queryConfig } from "src/shared/lib/query";
 
 export function Accounts() {
-  const { data, error, isPending } = useQuery({
-    queryKey: [API_URL.accounts],
-    queryFn: api.getAccounts,
-  });
+  const { data, error, isPending } = useQuery(queryConfig.getAccounts());
 
   if (isPending) {
     return <ProgressSpinner />;
